@@ -1,3 +1,12 @@
 <Solution>
-  <Project Path="InventoryManagement.csproj" />
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Inventory/" />
+  <Folder Name="/Services/Product/" />
+  <Folder Name="/Services/Reports/" />
+  <Folder Name="/Services/Warehouse/">
+    <Project Path="Services/Warehouse/Warehouse.API/Warehouse.API.csproj" Id="c7e96abf-4c9d-4882-9f27-8dce0b12c403" />
+    <Project Path="Services/Warehouse/Warehouse.Application/Warehouse.Application.csproj" Id="c377875f-3ec1-46b5-8fd3-662db456824e" />
+    <Project Path="Services/Warehouse/Warehouse.Core/Warehouse.Core.csproj" Id="82d36f4b-26a6-4a85-9c22-f1f1a6eed4e1" />
+    <Project Path="Services/Warehouse/Warehouse.Infrastructure/Warehouse.Infrastructure.csproj" Id="b9a36207-5841-4a64-82fa-c280b970c9de" />
+  </Folder>
 </Solution>
