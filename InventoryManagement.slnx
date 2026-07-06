@@ -1,7 +1,12 @@
 <Solution>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Inventory/" />
-  <Folder Name="/Services/Product/" />
+  <Folder Name="/Services/Product/">
+    <Project Path="Services/Product/Product.API/Product.API.csproj" Id="e76b4b9d-2529-4864-a78d-cad392717dca" />
+    <Project Path="Services/Product/Product.Application/Product.Application.csproj" Id="241d31f7-111b-4ff6-b8fc-f7e524a2dc08" />
+    <Project Path="Services/Product/Product.Core/Product.Core.csproj" Id="3262c6a8-a46a-4bc7-bc80-9788972b023e" />
+    <Project Path="Services/Product/Product.Infrastructure/Product.Infrastructure.csproj" Id="f3b1ca5e-bd21-43e1-af90-5a4c01d6f9ec" />
+  </Folder>
   <Folder Name="/Services/Reports/" />
   <Folder Name="/Services/Warehouse/">
     <Project Path="Services/Warehouse/Warehouse.API/Warehouse.API.csproj" Id="c7e96abf-4c9d-4882-9f27-8dce0b12c403" />

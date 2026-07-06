@@ -61,7 +61,7 @@ namespace Warehouse.Application.Mappers
                 Location = cmd.Location,
                 Name = cmd.Name,
                 Status = cmd.Status
-            }).ToList();
+            }).ToList(); 
         }
 
         public static CreateWarehouseCommand ToCreateCommand(this CreateWarehouseDto dto)
