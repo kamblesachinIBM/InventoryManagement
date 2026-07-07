@@ -20,11 +20,8 @@ namespace Product.Application.Handlers
         public async Task<ProductResponse> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
             var productEntity = request.ToEntity();
-            //await _dbContext.AddAsync(productEntity, cancellationToken);
-            //await _dbContext.SaveChangesAsync(cancellationToken);
             var addedProduct = await _repository.AddAsync(productEntity);
             return addedProduct.ToResponse();
-            //return productEntity.ToResponse();
         }
     }
 }
