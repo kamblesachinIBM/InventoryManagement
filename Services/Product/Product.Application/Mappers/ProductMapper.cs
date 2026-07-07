@@ -40,5 +40,17 @@ namespace Product.Application.Mappers
                 Price = productEntity.Price
             };
         }
+
+        public static List<ProductResponse> ToDtoList(this IEnumerable<ProductEntity> productEntities)
+        {
+            return productEntities.Select(cmd => new ProductResponse
+            {
+                Id = cmd.Id,
+                Code = cmd.Code ?? "",
+                Description = cmd.Description ?? "",
+                Name = cmd.Name ?? "",
+                Price = cmd.Price
+            }).ToList();
+        }
     }
 }

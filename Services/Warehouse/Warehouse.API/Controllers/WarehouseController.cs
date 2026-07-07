@@ -55,7 +55,7 @@ namespace Warehouse.API.Controllers
             var command = dto.ToUpdateCommand();
             var result = await _mediator.Send(command);
 
-            return Ok(result);
+            return Ok();
         }
 
         // https://localhost:7072/api/v1/Warehouse/{id}
