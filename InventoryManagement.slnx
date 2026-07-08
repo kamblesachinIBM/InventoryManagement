@@ -1,10 +1,10 @@
 <Solution>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Inventory/">
-    <Project Path="../InventoryManagement_Latest/Services/Inventory/Inventory.API/Inventory.API.csproj" />
-    <Project Path="../InventoryManagement_Latest/Services/Inventory/Inventory.Application/Inventory.Application.csproj" />
-    <Project Path="../InventoryManagement_Latest/Services/Inventory/Inventory.Core/Inventory.Core.csproj" />
-    <Project Path="../InventoryManagement_Latest/Services/Inventory/Inventory.Infrastructure/Inventory.Infrastructure.csproj" />
+    <Project Path="Services/Inventory/Inventory.API/Inventory.API.csproj" />
+    <Project Path="Services/Inventory/Inventory.Application/Inventory.Application.csproj" />
+    <Project Path="Services/Inventory/Inventory.Core/Inventory.Core.csproj" />
+    <Project Path="Services/Inventory/Inventory.Infrastructure/Inventory.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/Services/Product/">
     <Project Path="Services/Product/Product.API/Product.API.csproj" Id="e76b4b9d-2529-4864-a78d-cad392717dca" />
