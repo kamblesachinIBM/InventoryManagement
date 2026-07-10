@@ -21,7 +21,7 @@ builder.Services.AddSwaggerGen();
 //{
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("InventoryMgmtConnectionString"));
 //});
-var connectionString = builder.Configuration.GetConnectionString("InventoryMgmtConnectionString")
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? "Server=localhost\\MSSQLSERVER01;Database=InventoryManagementDb;Trusted_Connection=true;";
 builder.Services.AddDbContext<InventoryDbContext>(options =>
     options.UseSqlServer(connectionString));

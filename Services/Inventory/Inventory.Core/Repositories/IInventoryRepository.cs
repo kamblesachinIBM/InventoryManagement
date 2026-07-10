@@ -4,6 +4,7 @@ namespace Inventory.Core.Repositories
 {
     public interface IInventoryRepository : IAsyncRepository<InventoryEntity>
     {
-        Task<IEnumerable<InventoryEntity>> GetInventoryByName(string name);
+        Task<IEnumerable<InventoryEntity>> GetInventoryByProduct(int prodId);
+
     }
 }

@@ -7,6 +7,7 @@ namespace Inventory.Core.Repositories
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
+        Task<T> GetByWarehouseIdAsync(int warehouseId);
         Task<T> AddAsync(T entity);
         Task<bool> UpdateAsync(T newEntity, T oldEntity);
         Task<bool> DeleteAsync(T entity);

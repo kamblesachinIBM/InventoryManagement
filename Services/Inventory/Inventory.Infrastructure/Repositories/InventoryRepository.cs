@@ -9,11 +9,11 @@ namespace Inventory.Infrastructure.Repositories
     {
         public InventoryRepository(InventoryDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<InventoryEntity>> GetInventoryByName(string name)
+        public async Task<IEnumerable<InventoryEntity>> GetInventoryByProduct(int prodId)
         {
             return await _dbContext.Inventory
                 .AsNoTracking()
-                .Where(o => o.Name == name)
+                .Where(o => o.ProductId == prodId)
                 .ToListAsync();
         }
     }

@@ -11,10 +11,9 @@ namespace Inventory.Application.Mappers
         {
             return new InventoryDto(
                 entity.Id,
-                entity.Code,
-                entity.Name,
+                entity.ProductId,
+                entity.WarehouseId,
                 entity.Quantity,
-                entity.Location,
                 entity.Status
             );
         }
@@ -23,10 +22,9 @@ namespace Inventory.Application.Mappers
         {
             return new InventoryEntity
             {
-                Code = cmd.Code,
-                Name = cmd.Name,
+                ProductId = cmd.ProductId,
+                WarehouseId = cmd.WarehouseId,
                 Quantity = cmd.Quantity,
-                Location = cmd.Location,
                 Status = cmd.Status
             };
         }
@@ -36,10 +34,9 @@ namespace Inventory.Application.Mappers
             return new InventoryResponse
             {
                 Id = entity.Id,
-                Code = entity.Code,
-                Name = entity.Name,
+                ProductId = entity.ProductId,
+                WarehouseId = entity.WarehouseId,
                 Quantity = entity.Quantity,
-                Location = entity.Location,
                 Status = entity.Status
             };
         }
@@ -49,10 +46,9 @@ namespace Inventory.Application.Mappers
             return new InventoryEntity
             {
                 Id = cmd.Id,
-                Code = cmd.Code,
-                Name = cmd.Name,
+                ProductId = cmd.ProductId,
+                WarehouseId = cmd.WarehouseId,
                 Quantity = cmd.Quantity,
-                Location = cmd.Location,
                 Status = cmd.Status
             };
         }
@@ -61,10 +57,9 @@ namespace Inventory.Application.Mappers
         {
             return new CreateInventoryCommand
             {
-                Code = dto.Code,
-                Name = dto.Name,
+                ProductId = dto.ProductId,
+                WarehouseId = dto.WarehouseId,
                 Quantity = dto.Quantity,
-                Location = dto.Location,
                 Status = dto.Status
             };
         }
@@ -74,10 +69,9 @@ namespace Inventory.Application.Mappers
             return new UpdateInventoryCommand
             {
                 Id = dto.id,
-                Code = dto.Code,
-                Name = dto.Name,
+                ProductId = dto.ProductId,
+                WarehouseId = dto.WarehouseId,
                 Quantity = dto.Quantity,
-                Location = dto.Location,
                 Status = dto.Status
             };
         }

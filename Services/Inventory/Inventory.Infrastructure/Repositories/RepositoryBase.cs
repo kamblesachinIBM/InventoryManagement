@@ -46,6 +46,10 @@ namespace Inventory.Infrastructure.Repositories
         {
             return await _dbContext.Set<T>().FindAsync(id);
         }
+        public async Task<T> GetByWarehouseIdAsync(int WarehouseId)
+        {
+            return await _dbContext.Set<T>().FindAsync(WarehouseId);
+        }
 
         public async Task<bool> UpdateAsync(T newEntity, T existingEntity)
         {

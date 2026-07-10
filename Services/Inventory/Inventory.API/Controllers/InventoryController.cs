@@ -37,6 +37,15 @@ namespace Inventory.API.Controllers
 
             return Ok(result);
         }
+        // https://localhost:7073/api/v1/Inventory/warehouse/{warehouseId}
+        [HttpGet("warehouse/{warehouseId}")]
+        public async Task<ActionResult<InventoryDto>> GetInventoryByWarehouseId(int warehouseId)
+        {
+            var query = new GetInventoryByWarehouseIdQuery(warehouseId);
+            var result = await _mediator.Send(query);
+
+            return Ok(result);
+        }
 
         // https://localhost:7073/api/v1/Inventory
         [HttpPost()]

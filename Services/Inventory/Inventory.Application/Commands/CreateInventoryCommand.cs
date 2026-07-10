@@ -5,10 +5,9 @@ namespace Inventory.Application.Commands
 {
     public record CreateInventoryCommand : IRequest<InventoryResponse>
     {
-        public string? Code { get; init; }
-        public string? Name { get; init; }
-        public int Quantity { get; init; }
-        public string? Location { get; init; }
+        public int ProductId { get; set; }
+        public int WarehouseId { get; set; }
+        public int Quantity { get; set; }
         public bool Status { get; init; }
     }
 }
