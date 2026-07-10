@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Product.Application.Commands;
 using Product.Application.DTOs;
 using Product.Application.Mappers;
 using Product.Application.Queries;
@@ -38,12 +39,36 @@ namespace Product.API.Controllers
             return Ok(result);
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ProductDto>> GetProductById(int id)
+        {
+            var query = new GetProductByIdQuery(id);
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
         [HttpPost]
         public async Task<ActionResult<ProductDto>> CreateProduct(CreateProductDto createProductDto)
         {
             var command = createProductDto.ToCreateProductCommand();
             var result = await _mediator.Send(command);
             return Ok(result);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<ProductDto>> UpdateProduct(UpdateProductDto updateProductDto)
+        {
+            var command = updateProductDto.ToUpdateProductCommand();
+            var result = await _mediator.Send(command);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteProduct(int id)
+        {
+            var command = new DeleteProductByIdCommand(id);
+            await _mediator.Send(command);
+            return NoContent();
         }
     }
 }

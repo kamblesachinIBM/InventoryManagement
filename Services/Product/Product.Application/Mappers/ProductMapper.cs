@@ -52,5 +52,29 @@ namespace Product.Application.Mappers
                 Price = cmd.Price
             }).ToList();
         }
+
+        public static UpdateProductCommand ToUpdateProductCommand(this UpdateProductDto updateProductDto)
+        {
+            return new UpdateProductCommand
+            {
+                Id = updateProductDto.Id,
+                Code = updateProductDto.Code,
+                Name = updateProductDto.Name,
+                Description = updateProductDto.Description,
+                Price = updateProductDto.Price
+            };
+        }
+
+        public static ProductEntity ToEntity(this UpdateProductCommand updateProductCommand)
+        {
+            return new ProductEntity
+            {
+                Id = updateProductCommand.Id,
+                Code = updateProductCommand.Code,
+                Name = updateProductCommand.Name,
+                Description = updateProductCommand.Description,
+                Price = updateProductCommand.Price
+            };
+        }
     }
 }
