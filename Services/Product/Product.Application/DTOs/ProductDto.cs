@@ -14,4 +14,11 @@
         string? Description,
         decimal Price);
 
+
+    public record class UpdateProductDto(
+        int Id,
+        string? Code,
+        string? Name,
+        string? Description,
+        decimal Price);
 }
