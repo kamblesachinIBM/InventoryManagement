@@ -1,0 +1,35 @@
+@baseUrl = https://localhost:7073
+
+### Get all inventory items
+GET {{baseUrl}}/api/v1/inventory
+
+### Get inventory item by id
+GET {{baseUrl}}/api/v1/inventory/1
+
+### Create inventory item
+POST {{baseUrl}}/api/v1/inventory
+Content-Type: application/json
+
+{
+  "code": "INV001",
+  "name": "Product A",
+  "quantity": 100,
+  "location": "Shelf A",
+  "status": true
+}
+
+### Update inventory item
+PUT {{baseUrl}}/api/v1/inventory/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "code": "INV001",
+  "name": "Product A Updated",
+  "quantity": 150,
+  "location": "Shelf B",
+  "status": true
+}
+
+### Delete inventory item
+DELETE {{baseUrl}}/api/v1/inventory/1
