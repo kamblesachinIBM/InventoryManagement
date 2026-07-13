@@ -1,6 +1,11 @@
 <Solution>
   <Folder Name="/Services/" />
-  <Folder Name="/Services/Inventory/" />
+  <Folder Name="/Services/Inventory/">
+    <Project Path="Services/Inventory/Inventory.API/Inventory.API.csproj" />
+    <Project Path="Services/Inventory/Inventory.Application/Inventory.Application.csproj" />
+    <Project Path="Services/Inventory/Inventory.Core/Inventory.Core.csproj" />
+    <Project Path="Services/Inventory/Inventory.Infrastructure/Inventory.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/Services/Product/">
     <Project Path="Services/Product/Product.API/Product.API.csproj" Id="e76b4b9d-2529-4864-a78d-cad392717dca" />
     <Project Path="Services/Product/Product.Application/Product.Application.csproj" Id="241d31f7-111b-4ff6-b8fc-f7e524a2dc08" />
